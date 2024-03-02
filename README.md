@@ -1,9 +1,7 @@
-# Chipathon 2023 
-# Working Area for the LTC2 Team
-Team Lead: Jorge Marin, Mario Romero
-Team members:
+# EAMTA2024
+# Basic Digital Desing Track
 
-    - ADC: Chile 2 (SAR)	
-    - DAC: Korea	
-    - Clocking: Japan
-    - Voltage Reference: Japan
+Repositorio para las tareas realizadas durante el track de diseño digital básico
+
+Jesus Avila
+
