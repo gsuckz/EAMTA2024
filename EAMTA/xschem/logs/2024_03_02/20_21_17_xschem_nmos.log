@@ -1,0 +1,19 @@
+open_pdks installation: using /home/designer/.volare
+SKYWATER_MODELS: /home/designer/.volare/sky130A/libs.tech/ngspice
+SKYWATER_STDCELLS: /home/designer/.volare/sky130A/libs.ref/sky130_fd_sc_hd/spice
+
+Paths registered on xschem:
+- /home/designer/.volare/sky130A/libs.tech/xschem
+- /home/designer/.volare/sky130A/libs.tech/xschem
+- /home/designer/.xschem/xschem_library
+- /usr/share/xschem/xschem_library
+- /workspaces/EAMTA2024/EAMTA/xschem/nmos
+
+xschemrc:     /workspaces/EAMTA2024/EAMTA/xschem/xschemrc
+working path: /workspaces/EAMTA2024/EAMTA/xschem
+
+-- THIS DEPENDS ON THE STRUCTURE OF THE PROJECT --
+The spice is generated on $module/output/extraction/test/
+When doing pex simulations, use relative references from there
+setup_tcp_bespice: success : listening to TCP port: 2022
+% 

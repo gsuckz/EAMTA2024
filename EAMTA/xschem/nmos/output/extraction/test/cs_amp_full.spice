@@ -1,0 +1,66 @@
+** sch_path: /workspaces/EAMTA2024/EAMTA/xschem/nmos/test/cs_amp_full.sch
+
+*.lib /home/designer/.volare/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+.lib /home/designer/.volare/sky130A/libs.tech/ngspice/sky130.lib.spice.tt.red tt
+
+
+.control
+write
+set appendwrite
+.endc
+
+
+**.subckt cs_amp_full d1
+*.iopin d1
+E1 g1 GND d1 ref 1000
+I0 VDD d1 224u
+I1 VDD vout 224u
+XM1 d1 g1 GND GND sky130_fd_pr__nfet_01v8 L=0.3 W=10 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM2 vout g2 GND GND sky130_fd_pr__nfet_01v8 L=0.3 W=10 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+vsup VDD GND 1.8
+vds ref GND 0.9
+vin g2 g1 dc=0 ac=1
+cload vout GND 5p m=1
+**** begin user architecture code
+
+
+.control
+
+ac dec 100 1 1T
+* plot vdb(vout)
+
+write
+
+.endc
+
+
+
+.control
+save all
+
+save @m.xm2.msky130_fd_pr__nfet_01v8[gm]
+save @m.xm2.msky130_fd_pr__nfet_01v8[id]
+save @m.xm2.msky130_fd_pr__nfet_01v8[gds]
+
+dc vin -0.01 0.01 0.001
+
+let gdsn = @m.xm2.msky130_fd_pr__nfet_01v8[gds]
+let gmn = @m.xm2.msky130_fd_pr__nfet_01v8[gm]
+let idn = @m.xm2.msky130_fd_pr__nfet_01v8[id]
+let ao = gmn / gdsn
+
+*plot deriv(vout) vs vout ao vs vout
+
+write
+
+.endc
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.GLOBAL VDD
+.end

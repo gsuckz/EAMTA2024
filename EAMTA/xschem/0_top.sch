@@ -27,3 +27,4 @@ C {and_gate_tb.sym} 50 -570 0 0 {name=xf2}
 C {xor_gate_tb.sym} 50 -480 0 0 {name=xf3}
 C {tgate_tb.sym} 50 -390 0 0 {name=xf4}
 C {ffdr_tb.sym} 50 -300 0 0 {name=xf5}
+C {counter4b.sym} 50 -210 0 0 {name=xf6}

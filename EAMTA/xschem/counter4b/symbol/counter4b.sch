@@ -159,27 +159,25 @@ C {devices/code_shown.sym} -3240 -4350 0 0 {name=NGSPICE only_toplevel=false val
 .param span=4
 .param stoptime=\{48*period\}
 .tran \{0.1*period\} \{stoptime\}
-.include /home/designer/.volare/sky130A/libs.tech/ngspice/sky130.lib.spice TT
-.lib /home/designer/.volare/sky130A/libs.tech/ngspice/sky130.lib.spice TT
 .control
 run
-plot \{q1 + 2\} \{q2 + 4\} \{q3 + 6\} \{q4 +8\} \{ce + 10\} \{clk + 12\} 
+plot \{q1 + 2\} \{q2 + 4\} \{q3 + 6\} \{q4 +8\} \{CE + 10\} \{clk + 12\} 
 .endc
 "}
 C {devices/vsource.sym} -3140 -4060 0 0 {name=V1 value=1.8 savecurrent=false}
-C {devices/vsource.sym} -3060 -4060 0 0 {name=V2 value=PULSE(1.8 0 \{0*period\} 10ps 10ps \{period/2\} \{period\} 1) savecurrent=false}
-C {devices/vsource.sym} -2980 -4060 0 0 {name=V3 value=PULSE(0 1.8 \{0*period\} 10ps 10ps \{period/2\} \{period\} 1) savecurrent=false}
-C {devices/vsource.sym} -2900 -4060 0 0 {name=V4 value=PULSE(0 1.8 \{0*period\} 10ps 10ps \{period/2\} \{period\}) savecurrent=false}
+C {devices/vsource.sym} -3060 -4060 0 0 {name=V2 value="PULSE(1.8 0 \{0*period\} 10ps 10ps \{period/2\} \{period\} 1)" savecurrent=false}
+C {devices/vsource.sym} -2980 -4060 0 0 {name=V3 value="PULSE(0 1.8 \{0*period\} 10ps 10ps \{period/2\} \{period\} 1)" savecurrent=false}
+C {devices/vsource.sym} -2900 -4060 0 0 {name=V4 value="PULSE(0 1.8 \{0*period\} 10ps 10ps \{period/2\} \{period\})" savecurrent=false}
 C {devices/gnd.sym} -3020 -4030 0 0 {name=l1 lab=GND}
 C {devices/lab_pin.sym} -3140 -4090 0 1 {name=p37 sig_type=std_logic lab=V}
 C {devices/lab_pin.sym} -3060 -4090 0 1 {name=p38 sig_type=std_logic lab=CE}
 C {devices/lab_pin.sym} -2980 -4090 0 1 {name=p39 sig_type=std_logic lab=clr}
 C {devices/lab_pin.sym} -2900 -4090 0 1 {name=p40 sig_type=std_logic lab=clk}
-C {devices/code.sym} -3260 -3930 0 0 {name=TT_MODELS 
+C {devices/code.sym} -3000 -3930 0 0 {name=TT_MODELS 
 only_toplevel=true 
 format="tcleval(  @value  )"
 value="
-.include $env(PDK_ROOT)/$env(PDK)/libs.tech/ngspice/design.ngspice
-.lib $env(PDK_ROOT)/$env(PDK)/libs.tech/ngspice/sm141064.ngspice typical
+.lib $env(PDK_ROOT)/$env(PDK)/libs.tech/ngspice/sky130.lib.spice.tt.red tt
+ 
 "
-spice_ignore=false}
+}
