@@ -1,4 +1,4 @@
-v {xschem version=3.4.4 file_version=1.2
+v {xschem version=3.4.5 file_version=1.2
 }
 G {}
 K {}
@@ -85,9 +85,9 @@ N -2230 -4190 -1860 -4190 {
 lab=gnd}
 N -1860 -4390 -1860 -4190 {
 lab=gnd}
-C {/home/designer/.volare/sky130A/libs.tech/xschem/sky130_fd_pr/nfet_01v8.sym} -2210 -4320 0 1 {name=M1
+C {sky130_fd_pr/nfet_01v8.sym} -2210 -4320 0 1 {name=M1
 L=0.15
-W=1
+W=1.5
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -99,9 +99,9 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 body=GND}
-C {/home/designer/.volare/sky130A/libs.tech/xschem/sky130_fd_pr/pfet_01v8.sym} -2440 -4530 0 0 {name=M2
+C {sky130_fd_pr/pfet_01v8.sym} -2440 -4530 0 0 {name=M2
 L=0.15
-W=1
+W=1.5
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -110,16 +110,16 @@ as="'int((nf+2)/2) * W/nf * 0.29'"
 ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
 nrd="'0.29 / W'" nrs="'0.29 / W'"
 sa=0 sb=0 sd=0
-model=nfet_01v8
+model=pfet_01v8
 spiceprefix=X
 body=GND}
 C {devices/iopin.sym} -2150 -4610 1 1 {name=p1 lab=A}
 C {devices/iopin.sym} -2240 -4380 0 0 {name=p4 lab=out}
 C {devices/iopin.sym} -2320 -4190 3 1 {name=p6 lab=gnd}
 C {devices/iopin.sym} -2330 -4560 1 1 {name=p7 lab=V}
-C {/home/designer/.volare/sky130A/libs.tech/xschem/sky130_fd_pr/nfet_01v8.sym} -2210 -4220 2 0 {name=M3
+C {sky130_fd_pr/nfet_01v8.sym} -2210 -4220 2 0 {name=M3
 L=0.15
-W=1
+W=1.5
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -131,9 +131,9 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 body=GND}
-C {/home/designer/.volare/sky130A/libs.tech/xschem/sky130_fd_pr/pfet_01v8.sym} -2440 -4440 0 0 {name=M4
+C {sky130_fd_pr/pfet_01v8.sym} -2440 -4440 0 0 {name=M4
 L=0.15
-W=1
+W=1.5
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -142,13 +142,41 @@ as="'int((nf+2)/2) * W/nf * 0.29'"
 ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
 nrd="'0.29 / W'" nrs="'0.29 / W'"
 sa=0 sb=0 sd=0
-model=nfet_01v8
+model=pfet_01v8
 spiceprefix=X
 body=GND}
 C {devices/iopin.sym} -2120 -4610 1 1 {name=p9 lab=B}
-C {/home/designer/.volare/sky130A/libs.tech/xschem/sky130_fd_pr/pfet_01v8.sym} -2210 -4530 0 1 {name=M5
+C {sky130_fd_pr/pfet_01v8.sym} -2210 -4530 0 1 {name=M5
 L=0.15
-W=1
+W=1.5
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8
+spiceprefix=X
+body=GND}
+C {sky130_fd_pr/pfet_01v8.sym} -2210 -4440 0 1 {name=M6
+L=0.15
+W=1.5
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8
+spiceprefix=X
+body=GND}
+C {sky130_fd_pr/nfet_01v8.sym} -2440 -4330 0 0 {name=M7
+L=0.15
+W=1.5
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -160,37 +188,9 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 body=GND}
-C {/home/designer/.volare/sky130A/libs.tech/xschem/sky130_fd_pr/pfet_01v8.sym} -2210 -4440 0 1 {name=M6
+C {sky130_fd_pr/nfet_01v8.sym} -2440 -4220 2 1 {name=M8
 L=0.15
-W=1
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8
-spiceprefix=X
-body=GND}
-C {/home/designer/.volare/sky130A/libs.tech/xschem/sky130_fd_pr/nfet_01v8.sym} -2440 -4330 0 0 {name=M7
-L=0.15
-W=1
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8
-spiceprefix=X
-body=GND}
-C {/home/designer/.volare/sky130A/libs.tech/xschem/sky130_fd_pr/nfet_01v8.sym} -2440 -4220 2 1 {name=M8
-L=0.15
-W=1
+W=1.5
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -210,9 +210,23 @@ C {devices/lab_pin.sym} -2190 -4320 0 1 {name=p10 sig_type=std_logic lab=B}
 C {devices/lab_pin.sym} -2190 -4220 0 1 {name=p11 sig_type=std_logic lab=A}
 C {devices/lab_pin.sym} -2460 -4220 0 0 {name=p12 sig_type=std_logic lab=nA}
 C {devices/lab_pin.sym} -2460 -4330 0 0 {name=p13 sig_type=std_logic lab=nB}
-C {/home/designer/.volare/sky130A/libs.tech/xschem/sky130_fd_pr/pfet_01v8.sym} -1980 -4530 0 0 {name=M9
+C {sky130_fd_pr/pfet_01v8.sym} -1980 -4530 0 0 {name=M9
 L=0.15
-W=1
+W=1.5
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8
+spiceprefix=X
+body=GND}
+C {sky130_fd_pr/nfet_01v8.sym} -1980 -4420 0 0 {name=M10
+L=0.15
+W=0.75
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -224,9 +238,9 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 body=GND}
-C {/home/designer/.volare/sky130A/libs.tech/xschem/sky130_fd_pr/nfet_01v8.sym} -1980 -4420 0 0 {name=M10
+C {sky130_fd_pr/pfet_01v8.sym} -1790 -4530 0 0 {name=M11
 L=0.15
-W=1
+W=1.5
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -235,26 +249,12 @@ as="'int((nf+2)/2) * W/nf * 0.29'"
 ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
 nrd="'0.29 / W'" nrs="'0.29 / W'"
 sa=0 sb=0 sd=0
-model=nfet_01v8
+model=pfet_01v8
 spiceprefix=X
 body=GND}
-C {/home/designer/.volare/sky130A/libs.tech/xschem/sky130_fd_pr/pfet_01v8.sym} -1790 -4530 0 0 {name=M11
+C {sky130_fd_pr/nfet_01v8.sym} -1790 -4420 0 0 {name=M12
 L=0.15
-W=1
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8
-spiceprefix=X
-body=GND}
-C {/home/designer/.volare/sky130A/libs.tech/xschem/sky130_fd_pr/nfet_01v8.sym} -1790 -4420 0 0 {name=M12
-L=0.15
-W=1
+W=0.75
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 

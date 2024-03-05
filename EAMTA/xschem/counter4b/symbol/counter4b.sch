@@ -1,4 +1,4 @@
-v {xschem version=3.4.4 file_version=1.2
+v {xschem version=3.4.5 file_version=1.2
 }
 G {}
 K {}
@@ -110,36 +110,32 @@ lab=GND}
 C {and_gate.sym} -2490 -4320 1 0 {name=X1}
 C {ffdr.sym} -2180 -4210 0 0 {name=X2}
 C {xor_gate.sym} -2380 -4470 0 0 {name=X3}
-C {devices/lab_pin.sym} -2530 -4320 0 0 {name=p1 sig_type=std_logic lab=V}
+C {devices/lab_pin.sym} -2450 -4320 0 1 {name=p1 sig_type=std_logic lab=V}
 C {devices/lab_pin.sym} -2130 -4200 0 0 {name=p2 sig_type=std_logic lab=V}
-C {devices/lab_pin.sym} -2380 -4510 0 0 {name=p3 sig_type=std_logic lab=V}
+C {devices/lab_pin.sym} -2380 -4520 0 0 {name=p3 sig_type=std_logic lab=V}
 C {devices/lab_pin.sym} -2010 -4200 0 1 {name=p4 sig_type=std_logic lab=gnd}
-C {devices/lab_pin.sym} -2450 -4320 0 1 {name=p5 sig_type=std_logic lab=gnd}
-C {devices/lab_pin.sym} -2380 -4430 0 1 {name=p6 sig_type=std_logic lab=gnd}
+C {devices/lab_pin.sym} -2530 -4320 0 0 {name=p5 sig_type=std_logic lab=gnd}
+C {devices/lab_pin.sym} -2380 -4420 0 1 {name=p6 sig_type=std_logic lab=gnd}
 C {and_gate.sym} -2500 -3740 1 0 {name=X4}
 C {ffdr.sym} -2190 -3630 0 0 {name=X5}
 C {xor_gate.sym} -2390 -3890 0 0 {name=X6}
-C {devices/lab_pin.sym} -2540 -3740 0 0 {name=p7 sig_type=std_logic lab=V}
 C {devices/lab_pin.sym} -2140 -3620 0 0 {name=p8 sig_type=std_logic lab=V}
-C {devices/lab_pin.sym} -2390 -3930 0 0 {name=p9 sig_type=std_logic lab=V}
+C {devices/lab_pin.sym} -2390 -3940 0 0 {name=p9 sig_type=std_logic lab=V}
 C {devices/lab_pin.sym} -2020 -3620 0 1 {name=p10 sig_type=std_logic lab=gnd}
-C {devices/lab_pin.sym} -2460 -3740 0 1 {name=p11 sig_type=std_logic lab=gnd}
-C {devices/lab_pin.sym} -2390 -3850 0 1 {name=p12 sig_type=std_logic lab=gnd}
+C {devices/lab_pin.sym} -2390 -3840 0 1 {name=p12 sig_type=std_logic lab=gnd}
 C {and_gate.sym} -2490 -3110 1 0 {name=X7}
 C {ffdr.sym} -2180 -3000 0 0 {name=X8}
 C {xor_gate.sym} -2380 -3260 0 0 {name=X9}
-C {devices/lab_pin.sym} -2530 -3110 0 0 {name=p13 sig_type=std_logic lab=V}
 C {devices/lab_pin.sym} -2130 -2990 0 0 {name=p14 sig_type=std_logic lab=V}
-C {devices/lab_pin.sym} -2380 -3300 0 0 {name=p15 sig_type=std_logic lab=V}
+C {devices/lab_pin.sym} -2380 -3310 0 0 {name=p15 sig_type=std_logic lab=V}
 C {devices/lab_pin.sym} -2010 -2990 0 1 {name=p16 sig_type=std_logic lab=gnd}
-C {devices/lab_pin.sym} -2450 -3110 0 1 {name=p17 sig_type=std_logic lab=gnd}
-C {devices/lab_pin.sym} -2380 -3220 0 1 {name=p18 sig_type=std_logic lab=gnd}
+C {devices/lab_pin.sym} -2380 -3210 0 1 {name=p18 sig_type=std_logic lab=gnd}
 C {ffdr.sym} -2190 -2420 0 0 {name=X11}
 C {xor_gate.sym} -2390 -2680 0 0 {name=X12}
 C {devices/lab_pin.sym} -2140 -2410 0 0 {name=p20 sig_type=std_logic lab=V}
-C {devices/lab_pin.sym} -2390 -2720 0 0 {name=p21 sig_type=std_logic lab=V}
+C {devices/lab_pin.sym} -2390 -2730 0 0 {name=p21 sig_type=std_logic lab=V}
 C {devices/lab_pin.sym} -2020 -2410 0 1 {name=p22 sig_type=std_logic lab=gnd}
-C {devices/lab_pin.sym} -2390 -2640 0 1 {name=p24 sig_type=std_logic lab=gnd}
+C {devices/lab_pin.sym} -2390 -2630 0 1 {name=p24 sig_type=std_logic lab=gnd}
 C {devices/lab_pin.sym} -2070 -4540 3 1 {name=p19 sig_type=std_logic lab=clr}
 C {devices/lab_pin.sym} -2190 -4330 0 0 {name=p23 sig_type=std_logic lab=clk}
 C {devices/lab_pin.sym} -2080 -3960 3 1 {name=p25 sig_type=std_logic lab=clr}
@@ -155,18 +151,17 @@ C {devices/lab_pin.sym} -1950 -2710 0 1 {name=p34 sig_type=std_logic lab=Q4}
 C {devices/lab_pin.sym} -2470 -4450 0 0 {name=p35 sig_type=std_logic lab=CE}
 C {devices/code_shown.sym} -3240 -4350 0 0 {name=NGSPICE only_toplevel=false value="
 
-.param period=10n
+.param period=100n
 .param span=4
-.param stoptime=\{48*period\}
-.tran \{0.1*period\} \{stoptime\}
+.param stoptime=\{18*period\}
+.tran \{0.001*period\} \{stoptime\}
 .control
 run
-plot \{q1 + 2\} \{q2 + 4\} \{q3 + 6\} \{q4 +8\} \{CE + 10\} \{clk + 12\} 
-.endc
-"}
+plot \{Q1 + 2\} \{Q2 + 4\} \{Q3 + 6\} \{Q4 +8\} \{CE + 10\} \{clk + 12\} \{clr + 14\} 
+.endc"}
 C {devices/vsource.sym} -3140 -4060 0 0 {name=V1 value=1.8 savecurrent=false}
 C {devices/vsource.sym} -3060 -4060 0 0 {name=V2 value="PULSE(1.8 0 \{0*period\} 10ps 10ps \{period/2\} \{period\} 1)" savecurrent=false}
-C {devices/vsource.sym} -2980 -4060 0 0 {name=V3 value="PULSE(0 1.8 \{0*period\} 10ps 10ps \{period/2\} \{period\} 1)" savecurrent=false}
+C {devices/vsource.sym} -2980 -4060 0 0 {name=V3 value="PULSE( 0 1.8 \{0*period\} 10ps 10ps \{period/2\} \{period\} 1)" savecurrent=false}
 C {devices/vsource.sym} -2900 -4060 0 0 {name=V4 value="PULSE(0 1.8 \{0*period\} 10ps 10ps \{period/2\} \{period\})" savecurrent=false}
 C {devices/gnd.sym} -3020 -4030 0 0 {name=l1 lab=GND}
 C {devices/lab_pin.sym} -3140 -4090 0 1 {name=p37 sig_type=std_logic lab=V}
@@ -181,3 +176,7 @@ value="
  
 "
 }
+C {devices/lab_pin.sym} -2460 -3740 0 1 {name=p7 sig_type=std_logic lab=V}
+C {devices/lab_pin.sym} -2540 -3740 0 0 {name=p11 sig_type=std_logic lab=gnd}
+C {devices/lab_pin.sym} -2450 -3110 0 1 {name=p13 sig_type=std_logic lab=V}
+C {devices/lab_pin.sym} -2530 -3110 0 0 {name=p17 sig_type=std_logic lab=gnd}
