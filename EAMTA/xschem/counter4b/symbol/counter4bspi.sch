@@ -103,8 +103,6 @@ N -2490 -2660 -2480 -2660 {
 lab=#net5}
 N -2490 -2920 -2490 -2660 {
 lab=#net5}
-N -3140 -4030 -2900 -4030 {
-lab=GND}
 N -2600 -3830 -2580 -3830 {
 lab=X}
 N -2330 -3890 -2330 -3880 {
@@ -113,20 +111,18 @@ N -2320 -3260 -2320 -3250 {
 lab=#net4}
 N -2330 -2680 -2330 -2670 {
 lab=#net6}
-C {and_gate.sym} -2490 -4320 1 0 {name=X1}
+C {and_gate.sym} -2490 -4320 3 1 {name=X1}
 C {ffdr.sym} -2180 -4210 0 0 {name=X2}
 C {xor_gate.sym} -2380 -4470 2 1 {name=X3}
-C {devices/lab_pin.sym} -2450 -4320 0 1 {name=p1 sig_type=std_logic lab=V}
+C {devices/lab_pin.sym} -2530 -4320 0 0 {name=p1 sig_type=std_logic lab=V}
 C {devices/lab_pin.sym} -2130 -4200 0 0 {name=p2 sig_type=std_logic lab=V}
 C {devices/lab_pin.sym} -2380 -4420 0 0 {name=p3 sig_type=std_logic lab=V}
 C {devices/lab_pin.sym} -2010 -4200 0 1 {name=p4 sig_type=std_logic lab=gnd}
-C {devices/lab_pin.sym} -2530 -4320 0 0 {name=p5 sig_type=std_logic lab=gnd}
+C {devices/lab_pin.sym} -2450 -4320 0 1 {name=p5 sig_type=std_logic lab=gnd}
 C {devices/lab_pin.sym} -2380 -4520 0 1 {name=p6 sig_type=std_logic lab=gnd}
-C {and_gate.sym} -2500 -3740 1 0 {name=X4}
 C {ffdr.sym} -2190 -3630 0 0 {name=X5}
 C {devices/lab_pin.sym} -2140 -3620 0 0 {name=p8 sig_type=std_logic lab=V}
 C {devices/lab_pin.sym} -2020 -3620 0 1 {name=p10 sig_type=std_logic lab=gnd}
-C {and_gate.sym} -2490 -3110 1 0 {name=X7}
 C {ffdr.sym} -2180 -3000 0 0 {name=X8}
 C {devices/lab_pin.sym} -2130 -2990 0 0 {name=p14 sig_type=std_logic lab=V}
 C {devices/lab_pin.sym} -2010 -2990 0 1 {name=p16 sig_type=std_logic lab=gnd}
@@ -146,38 +142,6 @@ C {devices/lab_pin.sym} -1950 -3930 0 1 {name=p32 sig_type=std_logic lab=Q2}
 C {devices/lab_pin.sym} -1940 -3330 0 1 {name=p33 sig_type=std_logic lab=Q3}
 C {devices/lab_pin.sym} -1950 -2710 0 1 {name=p34 sig_type=std_logic lab=Q4}
 C {devices/lab_pin.sym} -2470 -4450 0 0 {name=p35 sig_type=std_logic lab=CE}
-C {devices/code_shown.sym} -3240 -4350 0 0 {name=NGSPICE only_toplevel=false value="
-
-.param period=100n
-.param span=4
-.param stoptime=\{18*period\}
-.tran \{0.001*period\} \{stoptime\}
-.control
-run
-plot \{Q1 + 2\} \{Q2 + 4\} \{Q3 + 6\} \{Q4 +8\} \{CE + 10\} \{clk + 12\} \{clr + 14\} 
-plot x
-.endc"}
-C {devices/vsource.sym} -3140 -4060 0 0 {name=V1 value=1.8 savecurrent=false}
-C {devices/vsource.sym} -3060 -4060 0 0 {name=V2 value="PULSE(1.8 0 \{0*period\} 10ps 10ps \{period/2\} \{period\} 1)" savecurrent=false}
-C {devices/vsource.sym} -2980 -4060 0 0 {name=V3 value="PULSE( 0 1.8 \{0*period\} 10ps 10ps \{period/2\} \{period\} 1)" savecurrent=false}
-C {devices/vsource.sym} -2900 -4060 0 0 {name=V4 value="PULSE(0 1.8 \{0*period\} 10ps 10ps \{period/2\} \{period\})" savecurrent=false}
-C {devices/gnd.sym} -3020 -4030 0 0 {name=l1 lab=GND}
-C {devices/lab_pin.sym} -3140 -4090 0 1 {name=p37 sig_type=std_logic lab=V}
-C {devices/lab_pin.sym} -3060 -4090 0 1 {name=p38 sig_type=std_logic lab=CE}
-C {devices/lab_pin.sym} -2980 -4090 0 1 {name=p39 sig_type=std_logic lab=clr}
-C {devices/lab_pin.sym} -2900 -4090 0 1 {name=p40 sig_type=std_logic lab=clk}
-C {devices/code.sym} -3000 -3930 0 0 {name=TT_MODELS 
-only_toplevel=true 
-format="tcleval(  @value  )"
-value="
-.lib $env(PDK_ROOT)/$env(PDK)/libs.tech/ngspice/sky130.lib.spice.tt.red tt
- 
-"
-}
-C {devices/lab_pin.sym} -2460 -3740 0 1 {name=p7 sig_type=std_logic lab=V}
-C {devices/lab_pin.sym} -2540 -3740 0 0 {name=p11 sig_type=std_logic lab=gnd}
-C {devices/lab_pin.sym} -2450 -3110 0 1 {name=p13 sig_type=std_logic lab=V}
-C {devices/lab_pin.sym} -2530 -3110 0 0 {name=p17 sig_type=std_logic lab=gnd}
 C {devices/lab_pin.sym} -2490 -4170 0 1 {name=p36 sig_type=std_logic lab=X}
 C {xor_gate.sym} -2390 -3890 2 1 {name=X6}
 C {devices/lab_pin.sym} -2390 -3840 0 0 {name=p9 sig_type=std_logic lab=V}
@@ -188,3 +152,9 @@ C {devices/lab_pin.sym} -2380 -3310 0 1 {name=p18 sig_type=std_logic lab=gnd}
 C {xor_gate.sym} -2390 -2680 2 1 {name=X10}
 C {devices/lab_pin.sym} -2390 -2630 0 0 {name=p21 sig_type=std_logic lab=V}
 C {devices/lab_pin.sym} -2390 -2730 0 1 {name=p24 sig_type=std_logic lab=gnd}
+C {and_gate.sym} -2500 -3740 3 1 {name=X4}
+C {devices/lab_pin.sym} -2540 -3740 0 0 {name=p7 sig_type=std_logic lab=V}
+C {devices/lab_pin.sym} -2460 -3740 0 1 {name=p11 sig_type=std_logic lab=gnd}
+C {and_gate.sym} -2490 -3110 3 1 {name=X7}
+C {devices/lab_pin.sym} -2530 -3110 0 0 {name=p13 sig_type=std_logic lab=V}
+C {devices/lab_pin.sym} -2450 -3110 0 1 {name=p17 sig_type=std_logic lab=gnd}

@@ -1,4 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
+v {xschem version=3.4.4 file_version=1.2
 * Copyright 2022 Stefan Frederik Schippers
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -35,3 +35,4 @@ B 5 -2.5 37.5 2.5 42.5 {name=gnd dir=inout}
 B 5 -2.5 -42.5 2.5 -37.5 {name=V dir=inout}
 B 5 57.5 -2.5 62.5 2.5 {name=out dir=inout}
 A 4 5 0 30 270 180 {}
+T {a} -20 -30 0 0 0.4 0.4 {}

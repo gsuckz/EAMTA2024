@@ -1,4 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
+v {xschem version=3.4.4 file_version=1.2
 }
 G {}
 K {}
@@ -126,4 +126,4 @@ spiceprefix=X
 body=GND}
 C {devices/iopin.sym} -2010 -4490 1 1 {name=p9 lab=B}
 C {devices/lab_pin.sym} -2060 -4230 1 1 {name=p10 lab=B}
-C {/foss/designs/EAMTA2024/EAMTA/xschem/counter4b/symbol/inv_gate.sym} -1920 -4370 0 0 {name=X1}
+C {inv_gate.sym} -1920 -4370 0 0 {name=X1}

@@ -1,4 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
+v {xschem version=3.4.4 file_version=1.2
 }
 G {}
 K {}
@@ -202,14 +202,14 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 body=GND}
-C {devices/lab_pin.sym} -2460 -4440 0 0 {name=p2 sig_type=std_logic lab=A}
-C {devices/lab_pin.sym} -2190 -4440 0 1 {name=p3 sig_type=std_logic lab=B}
-C {devices/lab_pin.sym} -2190 -4530 0 1 {name=p5 sig_type=std_logic lab=nA}
-C {devices/lab_pin.sym} -2460 -4530 0 0 {name=p8 sig_type=std_logic lab=nB}
+C {devices/lab_pin.sym} -2460 -4530 0 0 {name=p2 sig_type=std_logic lab=A}
+C {devices/lab_pin.sym} -2190 -4530 0 1 {name=p3 sig_type=std_logic lab=B}
+C {devices/lab_pin.sym} -2190 -4440 0 1 {name=p5 sig_type=std_logic lab=nA}
+C {devices/lab_pin.sym} -2460 -4440 0 0 {name=p8 sig_type=std_logic lab=nB}
 C {devices/lab_pin.sym} -2190 -4320 0 1 {name=p10 sig_type=std_logic lab=B}
 C {devices/lab_pin.sym} -2190 -4220 0 1 {name=p11 sig_type=std_logic lab=A}
-C {devices/lab_pin.sym} -2460 -4220 0 0 {name=p12 sig_type=std_logic lab=nA}
-C {devices/lab_pin.sym} -2460 -4330 0 0 {name=p13 sig_type=std_logic lab=nB}
+C {devices/lab_pin.sym} -2460 -4330 0 0 {name=p12 sig_type=std_logic lab=nA}
+C {devices/lab_pin.sym} -2460 -4220 0 0 {name=p13 sig_type=std_logic lab=nB}
 C {sky130_fd_pr/pfet_01v8.sym} -1980 -4530 0 0 {name=M9
 L=0.15
 W=1.5
